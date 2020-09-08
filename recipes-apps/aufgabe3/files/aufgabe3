@@ -1,0 +1,34 @@
+#!/bin/sh
+
+. /etc/init.d/functions
+
+do_start() {
+	/usr/local/bin/aufgabe3 -platform eglfs &
+}
+
+do_stop() {
+	killproc aufgabe3
+}
+
+case "$1" in
+  start)
+	echo "Starting aufgabe3 app"
+	do_start
+	;;
+  stop)
+	echo "Stopping aufgabe3 app"
+	do_stop
+	;;
+  restart|force-reload)
+	echo "Restarting aufgabe3 app"
+	do_stop
+	sleep 1
+	do_start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
