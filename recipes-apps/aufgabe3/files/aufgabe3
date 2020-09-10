@@ -3,24 +3,24 @@
 . /etc/init.d/functions
 
 do_start() {
-	/usr/local/bin/aufgabe3 -platform eglfs &
+	/usr/local/bin/samegame -platform eglfs &
 }
 
 do_stop() {
-	killproc aufgabe3
+	killproc samegame
 }
 
 case "$1" in
   start)
-	echo "Starting aufgabe3 app"
+	echo "Starting samegame app"
 	do_start
 	;;
   stop)
-	echo "Stopping aufgabe3 app"
+	echo "Stopping samegame app"
 	do_stop
 	;;
   restart|force-reload)
-	echo "Restarting aufgabe3 app"
+	echo "Restarting samegame app"
 	do_stop
 	sleep 1
 	do_start
