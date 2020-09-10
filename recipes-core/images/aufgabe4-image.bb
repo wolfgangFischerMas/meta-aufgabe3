@@ -17,6 +17,7 @@ IMAGE_INSTALL += " \
     packagegroup-qml-multimedia \
     aufgabe3 \
     cups \
+    libpam \
     samba \
 "
 
