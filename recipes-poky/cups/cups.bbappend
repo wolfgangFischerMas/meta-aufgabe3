@@ -1,7 +1,7 @@
 inherit update-rc.d
 
 INITSCRIPT_NAME = "cups"
-INITSCRIPT_PARAMS = "defaults"
+INITSCRIPT_PARAMS = "defaults 20"
 
 SRC_URI += "file://cups.initd"
 
