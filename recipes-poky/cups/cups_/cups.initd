@@ -4,6 +4,7 @@
 
 do_start() {
 	/usr/sbin/cupsd -c /etc/cups/cupsd.conf -s /etc/cups/cups-files.conf
+	/usr/sbin/cupsctl --debug-logging --remote-admin --remote-any --share-printers --user-cancel-any
 }
 
 do_stop() {
