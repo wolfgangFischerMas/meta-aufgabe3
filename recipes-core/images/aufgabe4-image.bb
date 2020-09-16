@@ -20,6 +20,7 @@ IMAGE_INSTALL += " \
     cups-doc \
     libpam \
     samba \
+    smbclient \
     cifs-utils \
 "
 
