@@ -20,6 +20,7 @@ IMAGE_INSTALL += " \
     cups-doc \
     libpam \
     samba \
+    cifs-utils \
 "
 
 # Add an extra 0.5 GB of free space to the root filesystem
